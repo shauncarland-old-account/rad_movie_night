@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :movies
   resources :polls
   root 'polls#index'
-
 end

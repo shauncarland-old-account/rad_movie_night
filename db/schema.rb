@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914114638) do
+ActiveRecord::Schema.define(version: 20160914133736) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "name",        null: false
@@ -18,6 +18,22 @@ ActiveRecord::Schema.define(version: 20160914114638) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "poll_options", force: :cascade do |t|
+    t.integer  "poll_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "movie_id"
+    t.index ["movie_id"], name: "index_poll_options_on_movie_id"
+    t.index ["poll_id"], name: "index_poll_options_on_poll_id"
+  end
+
+  create_table "polls", force: :cascade do |t|
+    t.string   "month"
+    t.integer  "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

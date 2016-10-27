@@ -49,3 +49,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # rspec
 gem 'rspec'
+
+group :development, :test do
+  gem 'rspec-rails',      ">= 2.0.0.beta"
+end

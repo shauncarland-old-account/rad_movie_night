@@ -10,5 +10,10 @@ describe PollOption do
 
   describe 'when the poll option belongs to a poll' do
     let!(:poll) { FactoryGirl.create(:poll) }
+    let!(:poll_option) { FactoryGirl.create(:poll_option, poll: poll) }
+
+    it 'creates a valid poll option' do
+      expect(poll_option).to be_valid
+    end
   end
 end

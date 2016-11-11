@@ -52,7 +52,11 @@ gem 'rspec'
 
 group :development, :test do
   gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'factory_girl_rails'
 end
+
+gem 'factory_girl'
+gem 'minitest'
 
 group :test do
   gem 'shoulda-matchers', '~> 2.5.0'

@@ -77,3 +77,9 @@
   [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Test"], ["year", 2006], ["created_at", 2016-11-11 18:35:57 UTC], ["updated_at", 2016-11-11 18:35:57 UTC]]
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (11.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "polls" ("month", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["month", "November"], ["year", 2016], ["created_at", 2016-11-11 19:06:03 UTC], ["updated_at", 2016-11-11 19:06:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m

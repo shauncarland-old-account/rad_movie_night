@@ -61,3 +61,6 @@ gem 'minitest'
 group :test do
   gem 'shoulda-matchers', '~> 2.5.0'
 end
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'

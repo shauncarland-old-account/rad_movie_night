@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :movies
   resources :polls
   resources :poll_options
-  root 'polls#index'
+  root 'welcome#index'
 end

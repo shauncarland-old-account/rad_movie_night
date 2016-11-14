@@ -1,6 +1,4 @@
 class PollOption < ApplicationRecord
   belongs_to :poll
-  has_one :movie
-
-  validates :movie, presence: true
+  belongs_to :movie
 end

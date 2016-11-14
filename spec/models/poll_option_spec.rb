@@ -12,8 +12,10 @@ describe PollOption do
     let!(:poll) { FactoryGirl.create(:poll) }
     let!(:poll_option) { FactoryGirl.create(:poll_option, poll: poll) }
 
-    it 'creates a valid poll option' do
-      expect(poll_option).to be_valid
+    describe 'and the poll option does not have a valid movie' do
+      it 'creates an invalid poll option' do
+        expect(poll_option).to_not be_valid
+      end
     end
   end
 end

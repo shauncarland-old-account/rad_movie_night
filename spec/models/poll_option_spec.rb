@@ -30,7 +30,7 @@ describe PollOption do
   end
 
   describe 'when the poll option has a movie, but does not belong to a poll' do
-    it 'does creats an invalid poll option' do
+    it 'creates an invalid poll option' do
       movie = Movie.new(name: "Test Movie", year: 2006)
       poll_option = PollOption.new(movie: movie)
       expect(poll_option).to_not be_valid

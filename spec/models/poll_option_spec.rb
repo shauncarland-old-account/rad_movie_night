@@ -10,10 +10,10 @@ describe PollOption do
 
   describe 'when the poll option belongs to a poll' do
     let!(:poll) { FactoryGirl.create(:poll) }
-    let!(:poll_option) { FactoryGirl.create(:poll_option, poll: poll) }
 
     describe 'and the poll option does not have a valid movie' do
       it 'creates an invalid poll option' do
+        poll_option = PollOption.new(poll: poll)
         expect(poll_option).to_not be_valid
       end
     end

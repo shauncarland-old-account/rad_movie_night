@@ -3,9 +3,8 @@
   <%= "#{@poll.month}, #{@poll.year}" %>
 </div>
 
-
-<%= @poll.poll_options.to_a.each do |poll_option| %>
-<div class="row">
-  <%= "#{poll_option.movie_id}" %>
-</div>
+<% @poll.poll_option_array.each do |movie| %>
+  <div class="row">
+    <%= movie[:name] %> (<%= movie[:year] %>) | Description | Vote Up
+  </div>
 <% end %>

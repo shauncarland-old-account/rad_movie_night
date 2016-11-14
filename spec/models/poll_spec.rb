@@ -19,8 +19,8 @@ describe Poll do
       let!(:poll_option_2) { FactoryGirl.create(:poll_option, poll: poll, movie: movie_2) }
 
       it 'returns an array with the three poll options when .poll_options method is called' do
-        expect(poll.poll_options.count).to eq(3)
-        expect(poll.poll_options).to eq([poll_option_1,poll_option_2,poll_option_3])
+        expect(poll.poll_options.count).to eq(2)
+        expect(poll.poll_options).to eq([poll_option_1,poll_option_2])
       end
 
       it 'loads a valid select array' do
@@ -28,7 +28,7 @@ describe Poll do
           { name: poll_option_1.movie.name, year: poll_option_1.movie.year },
           { name: poll_option_2.movie.name, year: poll_option_2.movie.year }
           ]
-          
+
         expect(poll.poll_option_array). to eq(poll_option_array)
       end
     end

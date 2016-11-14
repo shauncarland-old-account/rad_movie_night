@@ -5,6 +5,6 @@
 
 <% @poll.poll_option_array.each do |movie| %>
   <div class="row">
-    <%= movie[:name] %> (<%= movie[:year] %>) | Description | Vote Up
+    <%= movie[:name] %> (<%= movie[:year] %>) | <%=link_to("Description", movie[:movie]) %>| Vote Up
   </div>
 <% end %>

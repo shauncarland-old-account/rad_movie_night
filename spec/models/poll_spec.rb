@@ -25,8 +25,8 @@ describe Poll do
 
       it 'loads a valid select array' do
         poll_option_array = [
-          { name: poll_option_1.movie.name, year: poll_option_1.movie.year },
-          { name: poll_option_2.movie.name, year: poll_option_2.movie.year }
+          { name: poll_option_1.movie.name, year: poll_option_1.movie.year, movie: poll_option_1.movie },
+          { name: poll_option_2.movie.name, year: poll_option_2.movie.year, movie: poll_option_1.movie }
           ]
 
         expect(poll.poll_option_array). to eq(poll_option_array)

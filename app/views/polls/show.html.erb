@@ -1,1 +1,11 @@
-<%= @poll.month %>
+
+<div class="row">
+  <%= "#{@poll.month}, #{@poll.year}" %>
+</div>
+
+
+<%= @poll.poll_options.to_a.each do |poll_option| %>
+<div class="row">
+  <%= "#{poll_option.movie_id}" %>
+</div>
+<% end %>
